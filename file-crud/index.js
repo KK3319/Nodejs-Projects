@@ -91,7 +91,7 @@ const server = http.createServer((req, res) => {
     });
   }
 
-  // Delete a user 
+  // Delete a user by ID
   else if (method === 'DELETE' && url.startsWith('/users/')) {
     const id = url.split('/')[2];
     const users = readUsers();
