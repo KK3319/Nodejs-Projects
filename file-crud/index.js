@@ -5,13 +5,13 @@ const path = require('path');
 // File path for users.json
 const usersFilePath = path.join(__dirname, 'users.json');
 
-// Helper function to read users from file
+// Read Users from file
 const readUsers = () => {
   const data = fs.readFileSync(usersFilePath, 'utf-8');
   return JSON.parse(data);
 };
 
-// Helper function to write users to file
+//  write users to file
 const writeUsers = (users) => {
   fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
 };
@@ -64,7 +64,7 @@ const server = http.createServer((req, res) => {
     });
   }
 
-  // Update a user by ID
+  // Update a user 
   else if (method === 'PUT' && url.startsWith('/users/')) {
     const id = url.split('/')[2];
     let body = '';
@@ -91,7 +91,7 @@ const server = http.createServer((req, res) => {
     });
   }
 
-  // Delete a user by ID
+  // Delete a user 
   else if (method === 'DELETE' && url.startsWith('/users/')) {
     const id = url.split('/')[2];
     const users = readUsers();
@@ -108,7 +108,7 @@ const server = http.createServer((req, res) => {
     }
   }
 
-  // Handle invalid routes
+  //  invalid routes
   else {
     res.writeHead(404, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ message: 'Route not found' }));
