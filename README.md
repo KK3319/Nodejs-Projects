@@ -9,7 +9,8 @@ Project helps user to understand how Nodejs helps to create a well versed applic
 - Feature 2:- Send a Email from Server 
 - Feature 3:-Create a file on Local machine with help of Server 
 - Feature 4 :- Upload a  File from Local to Server 
-- Feature 5 :- Update a file from server to local 
+- Feature 5 :- Update a file from server to local
+- Feature 6 :- CRUD Operations  
 
 ## Installation
 1. Clone the repository:
